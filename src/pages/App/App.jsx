@@ -6,6 +6,7 @@ import MovieDetailPage from "../MovieDetailPage/MovieDetailPage";
 import MoviesListPage from "../MoviesListPage/MoviesListPage";
 import ActorsListPage from "../ActorsListPage/ActorsListPage";
 import NavBar from "../NavBar/NavBar";
+import { movies } from "../../data.js";
 
 function App() {
   const [user, setUser] = useState(null);
