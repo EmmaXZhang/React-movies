@@ -5,10 +5,11 @@ export default function MoviesListPage({ movies }) {
   return (
     <>
       <h1>MoviesListPage</h1>
-
-      {movies.map((movie, index) => (
-        <MovieCard movie={movie} key={index} />
-      ))}
+      <div className="movieList">
+        {movies.map((movie, index) => (
+          <MovieCard movie={movie} key={index} />
+        ))}
+      </div>
     </>
   );
 }
