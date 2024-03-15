@@ -40,7 +40,7 @@ function App() {
           <NavBar />
           <Routes>
             <Route path="/movies/:movieName" element={<MovieDetailPage />} />
-            <Route path="/" element={<MoviesListPage />} />
+            <Route path="/" element={<MoviesListPage movies={movies} />} />
             <Route path="/actors" element={<ActorsListPage />} />
           </Routes>
         </>
