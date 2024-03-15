@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import "./MovieCard.css";
+import { Link } from "react-router-dom";
 
 export default function MovieCard({ movie }) {
   const cardStyle = {
@@ -9,7 +10,7 @@ export default function MovieCard({ movie }) {
   return (
     <div className="card" style={cardStyle}>
       <div className="cardInfo">
-        <b>{movie.title}</b>
+        <Link to={`/movies/${movie.title}`}>{movie.title}</Link>
         <b>{movie.releaseDate}</b>
       </div>
     </div>

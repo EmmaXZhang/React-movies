@@ -39,7 +39,10 @@ function App() {
         <>
           <NavBar />
           <Routes>
-            <Route path="/movies/:movieName" element={<MovieDetailPage />} />
+            <Route
+              path="/movies/:movieName"
+              element={<MovieDetailPage movies={movies} />}
+            />
             <Route path="/" element={<MoviesListPage movies={movies} />} />
             <Route path="/actors" element={<ActorsListPage />} />
           </Routes>
