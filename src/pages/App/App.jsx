@@ -37,7 +37,7 @@ function App() {
     <main>
       {user ? (
         <>
-          <NavBar />
+          <NavBar user={user} />
           <Routes>
             <Route
               path="/movies/:movieName"
