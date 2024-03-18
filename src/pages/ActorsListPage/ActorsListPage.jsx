@@ -1,21 +1,28 @@
 /* eslint-disable react/prop-types */
 import ActorCard from "../../components/ActorCard";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 
 export default function ActorsListPage({ movies }) {
-  const [castSet, setCastSet] = useState(new Set());
+  // const [castSet, setCastSet] = useState(new Set());
 
-  useEffect(() => {
-    const updatedSet = new Set();
+  // useEffect(() => {
+  //   const updatedSet = new Set();
 
-    movies.map((movie) =>
-      movie.cast.forEach((castMember) => {
-        updatedSet.add(castMember);
-      })
-    );
+  //   movies.map((movie) =>
+  //     movie.cast.forEach((castMember) => {
+  //       updatedSet.add(castMember);
+  //     })
+  //   );
 
-    setCastSet(updatedSet);
-  }, [movies]);
+  //   setCastSet(updatedSet);
+  // }, [movies]);
+
+  const castSet = new Set();
+  movies.map((movie) =>
+    movie.cast.forEach((castMember) => {
+      castSet.add(castMember);
+    })
+  );
 
   const uniqueCastArray = Array.from(castSet);
 
