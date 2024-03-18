@@ -29,7 +29,7 @@ function App() {
 
   function handleSubmit(event) {
     event.preventDefault();
-    // alert(JSON.stringify(userLogin));
+
     setUser(userLogin.name);
   }
 
@@ -44,7 +44,10 @@ function App() {
               element={<MovieDetailPage movies={movies} />}
             />
             <Route path="/" element={<MoviesListPage movies={movies} />} />
-            <Route path="/actors" element={<ActorsListPage />} />
+            <Route
+              path="/actors"
+              element={<ActorsListPage movies={movies} />}
+            />
           </Routes>
         </>
       ) : (
